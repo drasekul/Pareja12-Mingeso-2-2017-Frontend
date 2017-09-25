@@ -18,10 +18,13 @@
     <!-- Custom styles for this template -->
     <link href="../css/simple-sidebar.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/table.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="../controllers/studentsController.js"></script>
+    
 
 </head>
 
-<body>
+<body ng-app="studentApp" ng-controller="getStudents">
 
     <div id="wrapper">
 
@@ -39,16 +42,14 @@
                 <li>
                     <a href="addStudent.html">Agregar un estudiante</a>
                 </li>
-                <li>
-                    <a href="#">Buscar a un estudiante por el nombre</a>
-                </li>
+            
                 
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
+        <div id="page-content-wrapper" >
             <div class="container-fluid">
                 <h1>Consultas sobre Estudiantes FING UdeS</h1>
                 <p>Acá se puede hacer cunsultas sobre los estudiantes de la Facultad de Ingeniería de la Universidad de Santiago de Chile.
@@ -67,7 +68,13 @@
                         <td>Carrera</td> 
                         <td>Año de Ingreso</td>
                         </tr>
-                        <tr></tr>
+                        <tr ng-repeat="student in students">
+                            <td>{{student.name}}</td>
+                            <td>{{student.rut}}</td>
+                            <td>{{student.email}}</td>
+                            <td>{{student.career}}</td>
+                            <td>{{student.income_year}}</td>
+                        </tr>
                     </table>
                 </div>
 

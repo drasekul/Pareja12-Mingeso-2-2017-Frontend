@@ -103,13 +103,13 @@
       padding-left: 0;
     }
     #wrapper.toggled {
-      padding-left: 400px;
+      padding-left: 280px;
     }
     #sidebar-wrapper {
       width: 0;
     }
     #wrapper.toggled #sidebar-wrapper {
-      width: 400px;
+      width: 280px;
     }
     #page-content-wrapper {
       padding: 20px;
